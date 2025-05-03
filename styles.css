@@ -1,0 +1,290 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif; /* Lighter, modern font */
+    line-height: 1.6;
+    background-color: #FFFFFF; /* White */
+    color: #212121; /* Dark Gray */
+  }
+  
+  /* Header */
+  header {
+    background-color: #212121; /* Black */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeInHeader 1.5s ease-out;
+  }
+  
+  header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400; /* Lighter weight */
+    letter-spacing: 1px;
+    animation: slideInUp 1.5s ease-out;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300; /* Lighter weight */
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #212121; /* Black */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 400; /* Lighter weight */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #03A9F4; /* Sky Blue */
+    color: #fff;
+    transform: translateY(-5px);
+    animation: hoverBounce 0.3s ease-in-out;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 60px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInSection 1.5s ease-out forwards;
+  }
+  
+  section h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #212121; /* Dark Gray */
+    font-weight: 400; /* Lighter weight */
+    animation: slideInUp 1s ease-out;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  /* About Section */
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    opacity: 0;
+    animation: slideInLeft 1.5s ease-out forwards;
+  }
+  
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #03A9F4; /* Sky Blue border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    animation: zoomIn 1s ease-out;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-text {
+    flex: 1;
+    z-index: 5;
+    color: #212121; /* Dark Gray */
+    font-weight: 400; /* Lighter weight */
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Skills Section */
+  h3 {
+    color: #212121; /* Dark Gray */
+    margin-top: 20px;
+    font-weight: 500; /* Medium weight */
+    font-size: 1.8rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 300; /* Lighter weight */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #212121; /* Black */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    animation: fadeInFooter 1s ease-in forwards;
+  }
+  
+  /* Card Hover Effect */
+  .card {
+    background-color: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Hover Effect */
+  button {
+    background-color: #212121; /* Black */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #03A9F4; /* Sky Blue */
+    animation: hoverBounce 0.3s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeInHeader {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInSection {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInFooter {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hoverBounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  
